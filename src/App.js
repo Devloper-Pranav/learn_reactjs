@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Users from './Users';
+// import {User} from './User';
+import User from './User';
 
 function App() {
   return (
     <div className="App">
-     <Users />
-    </div>
+      <h1>Hello World !!</h1>
+      <User />
+      <User />
+      <User />
+      <User />
+    </div> 
   );
 }
 
