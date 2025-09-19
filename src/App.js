@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 // import {User} from './User';
-import User from './User';
+// import User from './User';
 
 function App() {
   return (
@@ -14,5 +14,10 @@ function App() {
     </div> 
   );
 }
+
+
+// function User() {
+//   return <h1>Functional Component</h1>;
+// }
 
 export default App;
