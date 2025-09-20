@@ -1,20 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Users from './Users';
+import User from './User';
+
 
 function App() {
-
-  function Common() {
-    return <div>Common Component</div>
-  }
-
   return (
     <>
     <div className="App">
       <h1>Hello World !!</h1>
-      <Users/>
-      {/* {Common()} */}
-      <Common />
+      <User />
     </div> 
     
     </>
