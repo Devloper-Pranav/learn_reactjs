@@ -1,36 +1,45 @@
-import React, {useState} from "react";
+import React, {Component} from "react";
 import './App.css';
-import Counter from "./Counter";
 
-function App() {
+// class App extends React.Component {
+class App extends Component {
 
-  //Example 1
-  // let data = "how are you i am fine.";
-  let [data,setData] = useState("how are you i am fine.");
+  constructor(){
+    super();
 
-  const updateData = () => {
-    setData("Pranav Kumar");
-    alert(data);
+    this.state = {
+      // data: "how are you i am fine."
+      data: 1,
+    }
   }
 
-  console.log("Rendre------------");
+  demo(){
+    // alert("Class Component");
 
-  return (
+    this.setState({
+      // data:"Pranav Kumar"
+      data: this.state.data + 1,
+    });
+  }
+
+  render(){
+    console.log(this.state.data);
+
+    return (
     <>
     <div className="App">
-      {/* <h1>State</h1> */}
-      <h1>{data}</h1>
+      {/* <h1>Class Component</h1> */}
+      <h1>{this.state.data}</h1>
 
-      <button onClick={updateData}>Update Value</button>
-      <br/><br/>
-
-      <Counter />
+      <button onClick={ ()=>this.demo() }>Click Me</button>
     </div> 
     
     </>
     
 
   );
+  }
+  
 }
 
 
