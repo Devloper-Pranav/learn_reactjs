@@ -1,44 +1,51 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
 import './App.css';
+import UserCard from "./UserCard";
 
-// class App extends React.Component {
-class App extends Component {
+function App() {
 
-  constructor(){
-    super();
+  // Example 3
+  const [name, setName] = useState("Pranav Kumar");
 
-    this.state = {
-      // data: "how are you i am fine."
-      data: 1,
-    }
-  }
 
-  demo(){
-    // alert("Class Component");
+  // Example 2 - Multiple props
+  // const userData = [
+  //   {"name": "Prajakta", age:22, "email": "umpraj12@gmail.com"},
+  //   {"name": "Mansi", age:25, "email": "chmansi45@gmail.com"},
+  //   {"name": "Baladri", age:28, "email": "ydbaldri65@gmail.com"},
+  //   {"name": "Sharad", age:45, "email": "chsharad32@gmail.com"}
+  // ];
 
-    this.setState({
-      // data:"Pranav Kumar"
-      data: this.state.data + 1,
-    });
-  }
-
-  render(){
-    console.log(this.state.data);
-
-    return (
+return (
     <>
     <div className="App">
-      {/* <h1>Class Component</h1> */}
-      <h1>{this.state.data}</h1>
+      <h1>Props in React</h1>
 
-      <button onClick={ ()=>this.demo() }>Click Me</button>
+      {/* <UserCard name="Pranav Kumar" /> */}
+
+      <UserCard name={name} />
+
+      {/* Example 3 */}
+      <button onClick={()=> setName("Codeitsolutonhub")}>Update Props</button>
+
+      {/* Example 2 */}
+      {/* {userData.map((user,index) => (
+          <UserCard
+            key = {index}
+            name = {user.name}
+            age = {user.age}
+            email = {user.email}
+          />
+      ))} */}
+
+      
+
     </div> 
     
     </>
     
 
   );
-  }
   
 }
 
