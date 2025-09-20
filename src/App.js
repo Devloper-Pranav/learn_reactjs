@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-// import {User} from './User';
-import User from './User';
+import Users from './Users';
 
 function App() {
+
+  function Common() {
+    return <div>Common Component</div>
+  }
+
   return (
+    <>
     <div className="App">
       <h1>Hello World !!</h1>
-      <User />
-      <User />
-      <User />
-      <User />
+      <Users/>
+      {/* {Common()} */}
+      <Common />
     </div> 
+    
+    </>
+    
+
   );
 }
 
-
-// function User() {
-//   return <h1>Functional Component</h1>;
-// }
 
 export default App;
